@@ -15,7 +15,7 @@ import zipfile
 from os.path import join
 import time
 
-def scanAll(args, tagNames):
+def scanZipFiles(args):
     dcmFileCount = 0
     zipFileCount = 0
 
@@ -59,7 +59,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     t0 = time.time()
-    fileCount = scanDCMFiles(args, tagNames)
+    fileCount = scanZipFiles(args)
     t1 = time.time()
     
     if args.verbosity>0:
