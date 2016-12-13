@@ -12,8 +12,8 @@ import dicom
 def loadTagNames(args):
     with open(args.tags) as f:
         tagNames = f.read().splitlines()
-        return tagNames
     tagNames.sort()
+    return tagNames
 
 #Output tag names as the first row of the table   
 def outputFieldNames(args,tagNames):
